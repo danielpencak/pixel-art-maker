@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+#palette .purple {
+  border-radius: 50%;
+  border: 5px solid purple;
+  background-color: purple;
+  height: 20px;
+  width: 20px
+}
+
+#palette .orange {
+  border-radius: 50%;
+  border: 5px solid orange;
+  background-color: orange;
+  height: 20px;
+  width: 20px
+}
+
+#grid div {
+  border: 1px solid white;
+  height: 10px;
+  width: 10px;
+}
+
+#grid {
+  background-color: grey;
+  /*border: 5px solid black;*/
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  margin: 0 auto;
+  width: 600px;
+}
+
+#palette {
+  border: 5px solid black;
+
+}
+.purple {
+  background-color: purple;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.container {
+  /*border: 5px solid green;*/
+}
+
+body {
+  align-items: center;
+  background-color: red;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
