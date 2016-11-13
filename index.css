@@ -1,58 +1,402 @@
 * {
   box-sizing: border-box;
+  /*cursor: none;*/
 }
 
-#palette .purple {
+#cursor {
+  display: none;
+  height: 10px;
+  width: 10px
   border-radius: 50%;
-  border: 5px solid purple;
+  background-color: white;
+  border: 1px solid black;
+  position: fixed;
+  /*cursor: none;*/
+}
+#title {
+  /*border: 1px solid azure;*/
+  display: inline-block;
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+  color: deeppink;
+  margin-bottom: 5px;
+  margin-top: 40px;
+  left: 40%;
+  /*right: 50%;*/
+  /*padding: 10px;*/
+  position: relative;
+}
+#grid {
+  background-color: white;
+  box-shadow: 10px 10px 30px 10px rgba(9, 8, 8, 0.1);
+  border: 10px solid aquamarine;
+  border-radius: 30px;
+  border-style: groove;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 600px;
+}
+
+#palette {
+  background-color: white;
+  border: 10px solid aquamarine;
+  border-radius: 30px;
+  border-style: inset;
+  box-shadow: 10px 10px 30px 10px rgba(9, 8, 8, 0.1);
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 2px;
+  /*flex-wrap: wrap;*/
+  /*width: 600px;;*/
+}
+
+#grid div {
+  background-color: white;
+  border: 1px solid lightsteelblue;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+/*#palette div {
+  margin-left: 2px;
+}*/
+#palette .purple {
   background-color: purple;
+  border-radius: 50%;
   height: 20px;
   width: 20px
 }
 
 #palette .orange {
-  border-radius: 50%;
-  border: 5px solid orange;
   background-color: orange;
+  border-radius: 50%;
   height: 20px;
   width: 20px
 }
 
-#grid div {
-  border: 1px solid white;
-  height: 10px;
-  width: 10px;
+#palette .pink {
+  background-color: pink;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
 }
 
-#grid {
-  background-color: grey;
-  /*border: 5px solid black;*/
-  display: flex;
-  flex-wrap: wrap;
-  height: 500px;
-  margin: 0 auto;
-  width: 600px;
+#palette .red {
+  background-color: red;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
 }
 
-#palette {
-  border: 5px solid black;
-
+#palette .yellow {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
 }
-.purple {
+
+#palette .brown {
+  background-color: brown;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .green {
+  background-color: green;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .cyan {
+  background-color: cyan;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .blue {
+  background-color: blue;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .gray {
+  background-color: gray;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .black {
+  background-color: black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .lightblue {
+  background-color: lightblue;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .violet {
+  background-color: violet;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .teal {
+  background-color: teal;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .lime {
+  background-color: lime;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .maroon {
+  background-color: maroon;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .khaki {
+  background-color: khaki;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .tomato {
+  background-color: tomato;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .salmon {
+  background-color: salmon;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .hotpink {
+  background-color: hotpink;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .deeppink {
+  background-color: deeppink;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .crimson {
+  background-color: crimson;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .mediumvioletred {
+  background-color: mediumvioletred;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .firebrick {
+  background-color: firebrick;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .gold {
+  background-color: gold;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .coral {
+  background-color: coral;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .sandybrown {
+  background-color: sandybrown;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .chocolate {
+  background-color: chocolate;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .olive {
+  background-color: olive;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .chartreuse {
+  background-color: chartreuse;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .darkblue {
+  background-color: darkblue;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .navy {
+  background-color: navy;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .darkmagenta {
+  background-color: darkmagenta;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .fuchsia {
+  background-color: fuchsia;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+#palette .orchid {
+  background-color: orchid;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px
+}
+
+/*.purple {
   background-color: purple;
 }
 
-.orange {
-  background-color: orange;
+.hotpink {
+  background-color: hotpink;
 }
 
-.container {
-  /*border: 5px solid green;*/
+.hotpink {
+  background-color: hotpink;
 }
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}
+
+.hotpink {
+  background-color: hotpink;
+}*/
 
 body {
   align-items: center;
-  background-color: red;
+  background-color: lightcyan;
   display: flex;
   height: 100vh;
   justify-content: center;
