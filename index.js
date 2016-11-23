@@ -1,48 +1,32 @@
 (function() {
   'use strict';
-  const divsGrid = document.querySelector('#grid');
-  const divs1 = divsGrid.children;
-  const divsPalette = document.querySelector('#palette');
-  const divs2 = divsPalette.children;
+  const $grid = $('#grid');
   let usrColor;
 
   for (let i = 0; i <= 2575; i++) {
-    const div = document.createElement('div');
+    const $div = $('<div>').addClass('grid');
 
-    divsGrid.appendChild(div);
+    $grid.append($div);
   }
-  divsPalette.addEventListener('click', (event) => {
-    if (event.target === divsPalette) {
-      return;
-    }
+  $('.color').click((event) => {
     usrColor = event.target.classList[0];
-    for (const div of divs2) {
-      div.setAttribute('style', 'border: hidden');
-    }
-    event.target.setAttribute('style', 'border: 2px solid white');
+    $('.color').attr('style', 'border: hidden');
+    $(event.target).attr('style', 'border: 2px solid white');
   });
-  divsGrid.addEventListener('click', (event) => {
-    if (event.target === divsGrid) {
-      return;
-    }
-    for (const div of divs1) {
-      if (event.target === div) {
-        div.setAttribute('style', `background-color: ${usrColor}`);
-      }
-    }
+  $('.grid').click((event) => {
+    $(event.target).attr('style', `background-color: ${usrColor}`);
   });
   let isPainting = false;
 
-  divsGrid.addEventListener('mousedown', () => {
+  $grid.mousedown(() => {
     isPainting = true;
   });
-  div.addEventListener('mouseenter', (event) => {
-  if (isPainting) {
-    div.setAttribute('style', `background-color: ${usrColor}`);
-  }
-    });
-  }
-  divsGrid.addEventListener('mouseup', () => {
+  $('.grid').mouseenter((event) => {
+    if (isPainting) {
+      $(event.target).attr('style', `background-color: ${usrColor}`);
+    }
+  });
+  $(document).mouseup(() => {
     isPainting = false;
   });
 })();
