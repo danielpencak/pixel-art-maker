@@ -1,8 +1,3 @@
-const divsGrid = document.querySelector('#grid');
-for (let i = 0; i <= 2575; i++) {
-  const div = document.createElement('div');
-  divsGrid.appendChild(div);
-}
 (function() {
   'use strict';
   const divsGrid = document.querySelector('#grid');
@@ -10,6 +5,10 @@ for (let i = 0; i <= 2575; i++) {
   const divsPalette = document.querySelector('#palette');
   const divs2 = divsPalette.children;
   let usrColor;
+  for (let i = 0; i <= 2575; i++) {
+    const div = document.createElement('div');
+    divsGrid.appendChild(div);
+  }
   divsPalette.addEventListener('click', (event) => {
     if (event.target === divsPalette) {
       return;
