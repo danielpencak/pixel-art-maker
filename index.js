@@ -5,8 +5,10 @@
   const divsPalette = document.querySelector('#palette');
   const divs2 = divsPalette.children;
   let usrColor;
+
   for (let i = 0; i <= 2575; i++) {
     const div = document.createElement('div');
+
     divsGrid.appendChild(div);
   }
   divsPalette.addEventListener('click', (event) => {
@@ -30,15 +32,15 @@
     }
   });
   let isPainting = false;
-  divsGrid.addEventListener('mousedown', (event) => {
+
+  divsGrid.addEventListener('mousedown', () => {
     isPainting = true;
   });
-  for (const div of divs1) {
-    div.addEventListener('mouseenter', (event) => {
-    if (isPainting) {
-      div.setAttribute('style', `background-color: ${usrColor}`);
-    }
-      });
+  div.addEventListener('mouseenter', (event) => {
+  if (isPainting) {
+    div.setAttribute('style', `background-color: ${usrColor}`);
+  }
+    });
   }
   divsGrid.addEventListener('mouseup', () => {
     isPainting = false;
